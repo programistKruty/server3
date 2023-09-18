@@ -3,129 +3,19 @@
     <section class="hero">
       <div class="container">
         <div :class="{'logo': true, 'selfhosted': config.selfHosted }">
-          <img alt="LuckPerms logo" src="../assets/logo.svg">
+          <img alt="Sky logo" src="../assets/logo.svg">
           <div>
-            <h1>LuckPerms</h1>
+            <h1>SkyHaven</h1>
             <p>{{ $t('description') }}</p>
           </div>
         </div>
 
         <div class="download" v-if="!config.selfHosted">
-          <router-link to="/download">
-          <span>
-            <font-awesome icon="arrow-alt-circle-down" />
-            {{ $t('links.download') }}
-          </span>
-            <small>
-              v{{ version }}
-              <font-awesome icon="asterisk" :spin="true" v-if="!version" />
-            </small>
-          </router-link>
-          <small>
-            {{ $t('home.supported') }}
-          </small>
+
         </div>
       </div>
     </section>
 
-    <div class="container" v-if="!config.selfHosted">
-      <section class="resources">
-        <div>
-          <h2>{{ $t('home.why.title') }}</h2>
-          <p>{{ $t('home.why.description') }}</p>
-          <p>{{ $t('home.why.its') }}</p>
-          <ul>
-            <li v-html="$t('home.why.fast')"/>
-            <li v-html="$t('home.why.reliable')"/>
-            <li v-html="$t('home.why.easy')"/>
-            <li v-html="$t('home.why.flexible')"/>
-            <li v-html="$t('home.why.extensive')"/>
-            <li v-html="$t('home.why.free')"/>
-          </ul>
-          <i18n path="home.why.more" tag="p">
-            <template #wiki>
-              <router-link to="/wiki/Why-LuckPerms">{{ $t('home.why.why') }}</router-link>
-            </template>
-          </i18n>
-
-          <h2>{{ $t('home.apps.title') }}</h2>
-          <p>{{ $t('home.apps.description1') }}</p>
-          <p>{{ $t('home.apps.description2') }}</p>
-          <div class="tools">
-            <router-link to="/editor" alt="Web Editor">
-              <font-awesome icon="edit" />
-              {{ $t('links.editor') }}
-            </router-link>
-            <router-link to="/verbose" alt="Verbose Viewer">
-              <font-awesome icon="comment-alt" />
-              {{ $t('links.verbose') }}
-            </router-link>
-            <router-link to="/treeview" alt="Tree Viewer">
-              <font-awesome icon="sitemap" />
-              {{ $t('links.tree') }}
-            </router-link>
-          </div>
-        </div>
-        <div>
-          <router-link to="/wiki" class="resource">
-            <span>
-              <font-awesome icon="book" />
-              {{ $t('links.wiki') }}
-            </span>
-            <small>{{ $t('home.wiki') }}</small>
-          </router-link>
-          <a href="https://github.com/LuckPerms/LuckPerms" class="resource">
-            <span>
-              <font-awesome :icon="['fab', 'github']" />
-              GitHub
-            </span>
-            <small>{{ $t('home.github') }}</small>
-          </a>
-          <a href="https://discord.gg/luckperms" class="resource">
-            <span>
-              <font-awesome :icon="['fab', 'discord']" />
-              Discord
-            </span>
-            <small>{{ $t('home.discord', { count: discordUserCount }) }}</small>
-          </a>
-          <router-link to="/sponsor" class="resource">
-            <span>
-              <font-awesome icon="server" />
-              {{ $t('home.partner.title') }}
-            </span>
-            <small>{{ $t('home.partner.description') }}</small>
-          </router-link>
-          <a href="https://patreon.com/luckdev" class="resource">
-            <span>
-              <font-awesome :icon="['fab', 'patreon']" />
-              Patreon
-            </span>
-            <small>{{ $t('home.patreon', { count: patreonCount }) }}</small>
-          </a>
-        </div>
-      </section>
-    </div>
-
-    <div class="container selfhosted" v-else>
-      <section class="resources">
-        <div>
-          <div class="tools">
-            <router-link to="/editor" alt="Web Editor">
-              <font-awesome icon="edit" />
-              {{ $t('links.editor') }}
-            </router-link>
-            <router-link to="/verbose" alt="Verbose Viewer">
-              <font-awesome icon="comment-alt" />
-              {{ $t('links.verbose') }}
-            </router-link>
-            <router-link to="/treeview" alt="Tree Viewer">
-              <font-awesome icon="sitemap" />
-              {{ $t('links.tree') }}
-            </router-link>
-          </div>
-        </div>
-      </section>
-    </div>
 
   </main>
 </template>
@@ -135,7 +25,7 @@ export default {
   name: 'Home',
 
   metaInfo: {
-    title: 'LuckPerms',
+    title: 'SkyHaven',
     titleTemplate: null,
   },
 

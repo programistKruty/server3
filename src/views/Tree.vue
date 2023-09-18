@@ -66,9 +66,9 @@
     </div>
     <div v-else class="tool-intro">
       <div>
-        <img alt="LuckPerms logo" src="../assets/logo.svg">
+        <img alt="SkyHaven logo" src="../assets/logo.svg">
         <div class="text">
-          <h1>LuckPerms</h1>
+          <h1>SkyHaven</h1>
           <p>{{ $t('tree.title') }}</p>
           <template v-if="!errors.load && !errors.unsupported">
             <router-link to="/treeview/demo">
@@ -79,7 +79,7 @@
             <p>{{ $t('tree.home.generate') }}</p>
             <ul>
               <li>
-                <code>/lp tree [{{ $t('tree.home.scope') }}] [{{ $t('tree.home.player') }}]</code>
+                <code>/sp tree [{{ $t('tree.home.scope') }}] [{{ $t('tree.home.player') }}]</code>
               </li>
               <li>{{ $t('tree.home.url') }}</li>
             </ul>
@@ -90,7 +90,7 @@
               <p>{{ $t('editor.error.info') }}</p>
               <i18n path="editor.error.new" tag="p">
                 <template #command>
-                  <code>/lp editor</code>
+                  <code>/sp editor</code>
                 </template>
               </i18n>
             </template>

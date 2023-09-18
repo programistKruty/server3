@@ -3,16 +3,11 @@
     <nav id="nav">
       <div>
         <router-link to="/" class="logo">
-          <img alt="LuckPerms logo" src="@/assets/logo.svg">
-          <span>LuckPerms</span>
+          <img alt="SkyHaven logo" src="@/assets/logo.svg">
+          <span>SkyHaven</span>
         </router-link>
         <transition name="fade">
           <div v-if="!config.selfHosted && !isSponsorRoute" class="nav-message">
-            <router-link to="/sponsor">
-              <hr />
-              <img src="@/assets/bisect.svg" alt="Bisect Hosting">
-              <span v-html="$t('sponsor')" />
-            </router-link>
           </div>
         </transition>
       </div>
@@ -26,16 +21,8 @@
         </li>
         <template v-if="!config.selfHosted">
           <li>
-            <router-link to="/download">
-              <font-awesome icon="arrow-alt-circle-down" fixed-width />
-              {{ $t('links.download') }}
-            </router-link>
           </li>
           <li class="overlap">
-            <router-link to="/wiki">
-              <font-awesome icon="book" fixed-width />
-              {{ $t('wiki') }}
-            </router-link>
           </li>
         </template>
         <li>
@@ -66,33 +53,10 @@
         </li>
         <template v-if="!config.selfHosted">
           <li class="external overlap">
-            <a href="https://github.com/LuckPerms/LuckPerms" target="_blank" class="github">
-              <font-awesome :icon="['fab', 'github']" fixed-width />
-              <span>GitHub</span>
-            </a>
           </li>
           <li class="external">
-            <a href="https://discord.gg/luckperms" target="_blank" class="discord">
-              <font-awesome :icon="['fab', 'discord']" fixed-width />
-              <span>Discord</span>
-            </a>
           </li>
         </template>
-        <li v-if="locale" @click="localeMenu = !localeMenu">
-          <span class="locale">
-            <font-awesome icon="language" fixed-width />
-            <span class="locale-label">{{ $t('links.language') }}</span>
-          </span>
-          <ul :class="['locale-menu', { open: !!localeMenu }]">
-            <li
-              v-for="l in locales"
-              :key="l.code" @click="setLocale(l.code)"
-              :class="[{selected: l === locale}]"
-            >
-              <span>
-                <span :class="['fi', 'fi-' + l.countryCode]" :alt="l.name" /> {{ l.name }}
-              </span>
-            </li>
           </ul>
         </li>
       </ul>
@@ -122,18 +86,6 @@
       <div class="footer">
         <ul>
           <li>
-            <font-awesome icon="code-branch" fixed-width />
-            <a href="https://github.com/LuckPerms/LuckPermsWeb" target="_blank">LuckPermsWeb</a>
-            @
-            <a :href="'https://github.com/LuckPerms/LuckPermsWeb/commit/' + commitHash" target="_blank">{{ commitHash }}</a>
-          </li>
-          <li>
-            <router-link v-if="!config.selfHosted" to="/wiki/Credits" target="_blank">
-              Copyright © 2017-{{ new Date().getFullYear().toString() }} LuckPerms contributors
-            </router-link>
-            <a v-else href="https://luckperms.net/wiki/Credits" target="_blank">
-              Copyright © 2017-{{ new Date().getFullYear().toString() }} LuckPerms contributors
-            </a>
           </li>
         </ul>
       </div>
@@ -148,15 +100,15 @@ import docsearch from '@docsearch/js';
 
 export default {
   metaInfo: {
-    titleTemplate: '%s | LuckPerms',
+    titleTemplate: '%s | SkyHaven',
     meta: [
       {
         property: 'og:title',
-        content: 'LuckPerms',
+        content: 'SkyHaven',
       },
       {
         property: 'og:description',
-        content: 'Website & online apps for the LuckPerms plugin.',
+        content: 'Website & online apps for the SkyHaven plugin.',
       },
       {
         property: 'og:type',
@@ -164,15 +116,15 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://luckperms.net/logo.png',
+        content: 'https://SkyHaven.net/logo.png',
       },
       {
         property: 'og:url',
-        content: 'https://luckperms.net/',
+        content: 'https://SkyHaven.net/',
       },
       {
         property: 'og:site_name',
-        content: 'LuckPerms - A permissions plugin for Minecraft servers.',
+        content: 'SkyHaven - A permissions plugin for Minecraft servers.',
       },
     ],
   },
@@ -229,7 +181,7 @@ export default {
     docsearch({
       container: '#docsearch',
       appId: 'ZXKCPO8F1T',
-      indexName: 'luckperms',
+      indexName: 'SkyHaven',
       apiKey: 'a37e3bc32993f2eb764d0c84dbd526e9',
     });
   },

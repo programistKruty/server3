@@ -2,9 +2,9 @@
   <main class="editor">
     <div v-if="!sessionId" class="tool-intro">
       <div>
-        <img alt="LuckPerms logo" src="../assets/logo.svg">
+        <img alt="SkyHaven logo" src="../assets/logo.svg">
         <div class="text">
-          <h1>LuckPerms</h1>
+          <h1>SkyHaven</h1>
           <p>{{ $t('editor.description') }}</p>
           <router-link to="/editor/demo">
             <button class="button demo-button">
@@ -13,9 +13,9 @@
           </router-link>
           <p>{{ $t('editor.start') }}</p>
           <ul>
-            <li><code>/lp editor</code></li>
-            <li><code>/lp user &lt;user&gt; editor</code></li>
-            <li><code>/lp group &lt;group&gt; editor</code></li>
+            <li><code>/sp editor</code></li>
+            <li><code>/sp user &lt;user&gt; editor</code></li>
+            <li><code>/sp group &lt;group&gt; editor</code></li>
           </ul>
         </div>
       </div>
@@ -24,9 +24,9 @@
     <div v-else class="editor-container">
       <div v-if="!loaded" class="tool-intro" key="loading">
         <div>
-          <img alt="LuckPerms logo" src="../assets/logo.svg">
+          <img alt="SkyHaven logo" src="../assets/logo.svg">
           <div class="text">
-            <h1>LuckPerms</h1>
+            <h1>SkyHaven</h1>
             <p>{{ $t('editor.description') }}</p>
             <div v-if="!errors.load && !errors.unsupported">
               <p>
@@ -41,7 +41,7 @@
                 <p>{{ $t('editor.error.info') }}</p>
                 <i18n path="editor.error.new" tag="p">
                   <template #command>
-                    <code>/lp editor</code>
+                    <code>/sp editor</code>
                   </template>
                 </i18n>
               </template>
